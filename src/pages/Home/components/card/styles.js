@@ -45,3 +45,7 @@ export const Price = styled.p `
   color: #000000;
   margin: 0;
 `;
+export const ButtonAdd = styled.button `
+  font-size: 12px;
+  backgroun-color: green;
+`;

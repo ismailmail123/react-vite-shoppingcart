@@ -17,6 +17,9 @@ export const Content = styled.div `
 export const ProductContent = styled.div `
   display: flex;
   width: 100%;
+  img{
+    width: 50px;
+  }
 `;
 export const ProductText = styled.div `
   display: flex;

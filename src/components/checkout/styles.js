@@ -9,8 +9,9 @@ position: fixed;
 
 export const ContainerChackout = styled.div `
 background-color: rgb(243, 241, 241);
-    display: flex;
-    justify-content: space-between;
+    display: flex;    
+    justify-content: ${props => props.order && props.selectAll ? 'space-between' : 'end'};
+    background-color: ${({ order}) => order ? 'green' : 'red'};
     align-items: center;
     box-sizing: border-box;
 `;

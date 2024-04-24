@@ -10,7 +10,7 @@ const index = () => {
   return (
   <Container>
     <Content>
-    <ButtonCart onClick={() => navigate("/")}>
+    <ButtonCart onClick={() => navigate(-1)}>
       <img src={backIcon} />
       
     </ButtonCart>

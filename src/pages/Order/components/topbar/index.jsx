@@ -8,7 +8,7 @@ const index = () => {
   return (
     <Container>
       <Content>
-        <ButtonCart onClick={() => navigate("/cart")}>
+        <ButtonCart onClick={() => navigate(-1)}>
           <img src={backIcon} />
         </ButtonCart>
         <Title> Checkout</Title>
