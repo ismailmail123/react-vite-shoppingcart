@@ -97,10 +97,3 @@ export const Quantity = styled.div `
     margin: 3px;
   }
 `;
-export const TextEmpty = styled.p `
-
-    
-    font-size: 10px;
-    font-weight: bold;
-  
-`;

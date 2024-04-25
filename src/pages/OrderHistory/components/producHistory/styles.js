@@ -9,6 +9,14 @@ export const ContainerList = styled.div `
   /* background-color: aqua; */
   width: 100%;
 `;
+export const Container = styled.div `
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 10px;
+  border: 1px solid blue;
+`;
 export const Content = styled.div `
   display: flex;
   width: 100%;
@@ -87,4 +95,18 @@ export const Date = styled.div `
   align-items: center;
   flex-direction: column;
   font-size: 12px
+`;
+
+export const ButtonHide = styled.button `
+ background-color: whiteSmoke;
+ background-color: #e8eaec;
+ border: 1px solid blue;
+`;
+
+export const ContainerButton = styled.div `
+ display: flex;
+ justify-content: center;
+  align-items: center;
+  background-color: blue;
+  width: 450px
 `;

@@ -2,7 +2,7 @@
 
 import Image from "../../../../assets/react.svg";
 import useCartStore from "../../../../store/useCartStore";
-import { ButtonProduct, Date, Buttonpay, Component, ContainerList, Content, PPrice, Price, ProductContent, ProductText} from "./styles";
+import { Container, ButtonProduct, ButtonHide, Date, Buttonpay, Component, ContainerList, Content, PPrice, Price, ProductContent, ProductText, ContainerButton} from "./styles";
 
 // const groupOrdersByDate = (data) => {
 //   const groupedOrders = {};
@@ -40,8 +40,10 @@ const index = ({history}) => {
     <>
     {
     history.order.map((item,index) => (
-      <ContainerList>
-      <Content>
+      <>
+      <Container>
+      <ContainerList >
+      <Content key={index}>
         <ProductContent>
           <img src={item.image} />
           <ProductText>
@@ -63,6 +65,11 @@ const index = ({history}) => {
         </ProductContent>
       </Content>
     </ContainerList>
+    <ContainerButton>
+    <ButtonHide>Lihat detail</ButtonHide>
+    </ContainerButton>
+    </Container>
+      </>
     ))
     }
     

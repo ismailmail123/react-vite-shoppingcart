@@ -8,12 +8,14 @@ export const Container = styled.div `
   margin-bottom: 12px;
   overflow: hidden;
   box-shadow: 0px 3px 5px -2px rgba(0,0,0,0.1);
+  margin-top:auto;
 `;
 
 export const Image = styled.img `
   width: 100%;
   height: 136px;
-  background-color: grey;
+  
+  object-fit: contain;
 `;
 
 export const WrapDesc = styled.div `
@@ -48,4 +50,18 @@ export const Price = styled.p `
 export const ButtonAdd = styled.button `
   font-size: 12px;
   backgroun-color: green;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin: 10px
+  padding: 0;
+  img{
+    width: 30px;
+  }
+`;
+export const Containerbtn = styled.div `
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
 `;

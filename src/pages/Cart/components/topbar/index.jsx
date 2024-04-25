@@ -4,7 +4,7 @@ import backIcon from '../../../../assets/icons/back.svg'
 import { useNavigate } from 'react-router-dom';
 
 
-const index = () => {
+const index = ({handleUnselect}) => {
 
   const navigate = useNavigate();
   return (
@@ -16,7 +16,7 @@ const index = () => {
     </ButtonCart>
     <Title> Keranjang Saya</Title>
     </Content>
-    <ButtonDel>Ubah</ButtonDel>
+    <ButtonDel onClick={handleUnselect}>Ubah</ButtonDel>
     
   </Container>
   )

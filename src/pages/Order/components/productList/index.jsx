@@ -1,9 +1,5 @@
-// import "./style.css";
-
-import Image from "../../../../assets/react.svg";
-import useCartStore from "../../../../store/useCartStore";
 import { ButtonProduct, Quantity, Component, ContainerList, Content, PPrice, Price, ProductContent, ProductText} from "./styles";
-// import Detail from '../detail';
+
 
 const index = ({order}) => {
 
@@ -16,7 +12,7 @@ console.log('ini order', order)
         <ProductContent>
           <img src={order.image} />
           <ProductText>
-            <p>Laptop Asus</p>
+            <p>{order.title}</p>
             <ButtonProduct>
               <Price>
                 <PPrice>{new Intl.NumberFormat("id-ID", {
