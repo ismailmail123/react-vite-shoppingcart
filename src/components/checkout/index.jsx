@@ -35,7 +35,9 @@ const index = ({ selectall, order, handleSelectAllChange, product }) => {
   const selectedProducts = useCartStore((state) => state.selectedProducts);
 
   const { totalQuantity, totalPrice } = getTotal(selectedProducts);
-  const { addOrder } = useCartStore();
+
+  
+  // const { addOrder } = useCartStore();
   const onAddToOrder = () => {
     if (selectedProducts.length == 0) {
       alert("belum ada data yang ditambahkan");
@@ -58,6 +60,7 @@ const index = ({ selectall, order, handleSelectAllChange, product }) => {
     }
   }
 
+  
 
   return (
     <Container selectall={selectall} order={order}>

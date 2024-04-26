@@ -2,10 +2,27 @@
 import { Container, Title, ButtonCart, Content, ButtonDel } from './styles';
 import backIcon from '../../../../assets/icons/back.svg'
 import { useNavigate } from 'react-router-dom';
+import useCartStore from '../../../../store/useCartStore';
 
 
-const index = ({handleUnselect}) => {
+const index = () => {
 
+  // const {selectedProducts} = useCartStore();
+
+  const selectedProducts = useCartStore((state) => state.selectedProducts)
+  const removeSelectedProduct = (productId) => {
+    useCartStore.setState((state) => ({
+      selectedProducts: state.selectedProducts.filter(
+        (product) => product.id !== productId
+      ),
+    }));
+  };
+
+  const handleRemove = () => {
+    selectedProducts.forEach((product) => {
+      removeSelectedProduct(product.id);
+    });
+  }
   const navigate = useNavigate();
   return (
   <Container>
@@ -16,7 +33,7 @@ const index = ({handleUnselect}) => {
     </ButtonCart>
     <Title> Keranjang Saya</Title>
     </Content>
-    <ButtonDel onClick={handleUnselect}>Ubah</ButtonDel>
+    <ButtonDel onClick={handleRemove}>Ubah</ButtonDel>
     
   </Container>
   )
