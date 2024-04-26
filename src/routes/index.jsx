@@ -5,6 +5,7 @@ import CartPage from '../pages/Cart'
 import PageHistory from '../pages/OrderHistory'
 import PageDetail from '../pages/Detail'
 import OrderPage from '../pages/Order'
+import Modal from '../components/modal'
 
 const index = () => {
   const router = createBrowserRouter([
@@ -27,6 +28,10 @@ const index = () => {
     {
       path: "/order",
       element: <OrderPage />,
+    },
+    {
+      path: "/modal",
+      element: <Modal />,
     },
   ]);
 

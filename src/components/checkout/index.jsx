@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 // import "./style.css";
 import { useNavigate } from "react-router-dom";
+import Modal from '../modal'
 import {
   BtnCheckout,
   Checkbox,
@@ -11,6 +12,7 @@ import {
   Price,
 } from "./styles";
 import useCartStore from "../../store/useCartStore";
+import { useState } from "react";
 
 const getTotal = (cartItem) => {
   let totalQuantity = 0;
@@ -25,6 +27,11 @@ const getTotal = (cartItem) => {
 console.log("ini car Item");
 
 const index = ({ selectall, order, handleSelectAllChange, product }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleModal = () => setIsOpen(!isOpen);
+  
+  
   const selectedProducts = useCartStore((state) => state.selectedProducts);
 
   const { totalQuantity, totalPrice } = getTotal(selectedProducts);
@@ -33,14 +40,25 @@ const index = ({ selectall, order, handleSelectAllChange, product }) => {
     if (selectedProducts.length == 0) {
       alert("belum ada data yang ditambahkan");
     } else {
-      addOrder(selectedProducts);
-      alert("data berhasil ditambahkan");
-      navigate("/order");
+      setIsOpen(true)
+      // addOrder(selectedProducts);
+      // alert("data berhasil ditambahkan");
+      // navigate("/riwayat");
     }
 
     //  console.log(listProduct)
   };
   const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    if(selectedProducts.length === 0){
+      alert("Silahkan pilih beberapa produk")
+    }else{
+      navigate("/order")
+    }
+  }
+
+
   return (
     <Container selectall={selectall} order={order}>
       <ContainerChackout>
@@ -65,13 +83,14 @@ const index = ({ selectall, order, handleSelectAllChange, product }) => {
                 }).format(totalPrice)}
               </Price>
             </CheckoutText>
-            <BtnCheckout onClick={onAddToOrder}>
+            <BtnCheckout onClick={handleNavigate}>
               Checkout ({totalQuantity})
             </BtnCheckout>
           </Checkout>
         )}
         {!order && (
           <Checkout>
+            <Modal toggleModal={toggleModal} isOpen={isOpen} />
             <CheckoutText>
               <p>Total</p>
               <Price>
@@ -81,7 +100,7 @@ const index = ({ selectall, order, handleSelectAllChange, product }) => {
                 }).format(totalPrice)}
               </Price>
             </CheckoutText>
-            <BtnCheckout onClick={() => navigate("/riwayat")}>
+            <BtnCheckout onClick={onAddToOrder} >
               Buat pesanan
             </BtnCheckout>
           </Checkout>
