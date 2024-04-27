@@ -15,7 +15,7 @@ export const Container = styled.div `
   align-items: center;
   flex-direction: column;
   margin-bottom: 10px;
-  border: 1px solid blue;
+  // border: 1px solid blue;
 `;
 export const Content = styled.div `
   display: flex;

@@ -62,15 +62,7 @@ const index = ({ product }) => {
 
   console.log("handle selected", selectedProducts);
 
-  // const handleSelectAllChange = () => {
-  //   const allProductsSelected = selectedProducts.length === product.length;
-  //   if (allProductsSelected) {
-  //     orderHistory();
-  //   } else {
-  //     product.forEach((produc) => toggleSelectedProduct(produc.id));
-  //   }
-  // };
-
+ 
   const handleSelectAllChange = () => {
     const allProductsSelected = selectedProducts.length === product.length;
     if (allProductsSelected) {
@@ -81,16 +73,6 @@ const index = ({ product }) => {
       });
     }
   };
-  // const handleSelectAllChange = () => {
-  //   const allProductsSelected = selectedProducts.length === product.length;
-  //   if (allProductsSelected) {
-  //     selectAllProducts(product);
-  //   } else {
-  //     product.forEach((prod) => toggleSelectedProduct(prod.id));
-  //   }
-  // };
-  
-
 
 
   return (

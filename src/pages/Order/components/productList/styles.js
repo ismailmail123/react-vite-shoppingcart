@@ -63,7 +63,8 @@ export const Price = styled.div `
 export const PPrice = styled.div `
   font-size: 15px;
   text-align: start;
-  color: red;
+  font-weight: bold;
+  color: rgb(46, 124, 46);
 `;
 
 export const Component = styled.div `

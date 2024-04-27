@@ -28,6 +28,28 @@ const index = () => {
   //     });
   //   }
   // };
+
+
+    // Membuat objek untuk menyimpan item-order berdasarkan kategori
+    const categories = {};
+
+    // Mengelompokkan item-order berdasarkan kategori
+    cartItems.forEach(item => {
+      // Menentukan kategori (misalnya, kategori bisa diambil dari properti item.category)
+      const category = item.category; // Gantilah dengan properti yang sesuai
+      // Mengecek apakah kategori sudah ada dalam objek categories
+      if (!categories[category]) {
+        // Jika belum ada, inisialisasikan dengan array kosong
+        categories[category] = [];
+      }
+      // Memasukkan item ke dalam kategori yang sesuai
+      categories[category].push(item);
+    });
+  
+
+
+
+
   console.log("ini cart items", cartItems)
 
   return (

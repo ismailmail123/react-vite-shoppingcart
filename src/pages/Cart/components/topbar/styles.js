@@ -45,4 +45,7 @@ export const ButtonDel = styled.div `
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: bold;
+  color: rgb(46, 124, 46);
+  cursor: pointer;
 `;

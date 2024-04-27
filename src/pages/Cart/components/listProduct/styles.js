@@ -61,7 +61,8 @@ export const Price = styled.div `
 export const PPrice = styled.div `
   font-size: 15px;
   text-align: center;
-  color: red;
+  font-weight: bold;
+  color: rgb(46, 124, 46);
 `;
 
 export const Component = styled.div `
@@ -70,7 +71,7 @@ export const Component = styled.div `
   height: 20px;
   button {
     padding: 2px;
-    background-color: rgb(201, 153, 31);
+    background-color: rgb(46, 124, 46);
     font-size: 10px;
     margin-left: 10px;
     font-weight: bold;

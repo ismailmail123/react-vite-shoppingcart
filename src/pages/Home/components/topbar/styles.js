@@ -8,6 +8,7 @@ export const Container = styled.div `
   padding: 0 16px;
   box-sizing: border-box;
   height: 56px;
+  // position: fixed-top;
 `;
 
 export const Title = styled.h1 `
@@ -35,7 +36,7 @@ export const Containerlength = styled.div `
   font-weight: bold;
   color: white;
   margin-bottom: 10px;
-  background-color: blue;
+  background-color: rgb(46, 124, 46);
   padding: 0 3px;
   border-radius: 50%;
 `;

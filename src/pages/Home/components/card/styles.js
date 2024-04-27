@@ -43,8 +43,9 @@ export const Desc = styled.p `
 `;
 
 export const Price = styled.p `
-  font-size: 12px;
-  color: #000000;
+  font-size: 15px;
+  font-weight: bold;
+  color: rgb(46, 124, 46);
   margin: 0;
 `;
 export const ButtonAdd = styled.button `
