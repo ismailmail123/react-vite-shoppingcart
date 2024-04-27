@@ -66,6 +66,7 @@ export const Buttonpay = styled.div `
   border-radius: 10px; 
   color: white;
   padding: 5px;
+  cursor: pointer;
 `;
 
 export const PButtonProduct = styled.div `

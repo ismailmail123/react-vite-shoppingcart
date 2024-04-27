@@ -24,7 +24,7 @@ export const ButtonCart = styled.div `
   display: flex;
   justify-content: center;
   align-items: center;
-
+  cursor: pointer;
   img {
     height: 20px;
     width: 20px;

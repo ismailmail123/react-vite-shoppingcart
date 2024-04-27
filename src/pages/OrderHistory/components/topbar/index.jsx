@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { Container, Title, ButtonCart, Content} from './styles'
+import { Container, Title, ButtonCart, Content, Backhome, Buttonhome} from './styles'
 import backIcon from '../../../../assets/icons/back.svg'
 import { useNavigate } from 'react-router-dom';
 import cartIcon from '../../../../assets/icons/cart.svg'
@@ -16,11 +16,14 @@ const index = () => {
     </ButtonCart>
     <Title> Pesanan Saya</Title>
     </Content>
-    {/* <Backtohome> */}
-      <ButtonCart onClick={() => navigate('/cart')}>
+    <Backhome>
+    <Buttonhome onClick={() => navigate('/')}>
+        Home
+      </Buttonhome>
+    <ButtonCart onClick={() => navigate('/cart')}>
         <img src={cartIcon} />
       </ButtonCart>
-    {/* </Backtohome> */}
+    </Backhome>
   </Container>
   )
 };

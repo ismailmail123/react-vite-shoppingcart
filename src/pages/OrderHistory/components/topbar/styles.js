@@ -24,11 +24,22 @@ export const ButtonCart = styled.div `
   display: flex;
   justify-content: center;
   align-items: center;
-
+  cursor: pointer;
   img {
     height: 20px;
     width: 20px;
   }
+`;
+export const Buttonhome = styled.div `
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 `;
 
 export const Content = styled.div `
@@ -37,7 +48,7 @@ export const Content = styled.div `
   width: 170px;
   height: 32 px;
 `;
-export const Backtohome = styled.div `
+export const Backhome = styled.div `
   width: 90px;
   display: flex;
   align-items: center;
