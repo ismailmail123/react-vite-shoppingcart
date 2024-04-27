@@ -1,6 +1,3 @@
-// import "./style.css";
-
-// import Image from "../../../../assets/react.svg";
 import { useState } from "react";
 import Checkout from "../../../../components/checkout";
 import useCartStore from "../../../../store/useCartStore";
@@ -16,7 +13,6 @@ import {
   ProductText,
   Quantity,
 } from "./styles";
-import Topbar from "../topbar";
 
 const index = ({ product }) => {
   const {
@@ -26,7 +22,7 @@ const index = ({ product }) => {
     orderHistory,
     selectedProducts,
     toggleSelectedProduct,
-    selectAllProducts
+    selectAllProducts,
   } = useCartStore();
 
   const [isChecked, setIsChecked] = useState(true);
@@ -36,19 +32,15 @@ const index = ({ product }) => {
   };
 
   const onDecreaseQuantity = (productId) => {
-    if(!isChecked){
-      alert("Prodak dalam keadaan terseleksi")
-    }else{
-    decreaseQuantity(productId);
-    }
+      decreaseQuantity(productId);
   };
 
   const onRemoveItem = (productId) => {
-    if(!isChecked){
-      alert("Prodak dalam keadaan terseleksi")
-    }else{
-    removeItemFromCart(productId);
-  }
+    if (!isChecked) {
+      alert("Prodak dalam keadaan terseleksi");
+    } else {
+      removeItemFromCart(productId);
+    }
   };
   // const { orderHistory } = useCartStore();
   console.log("ini product", orderHistory);
@@ -58,11 +50,9 @@ const index = ({ product }) => {
     setIsChecked(!isChecked);
     toggleSelectedProduct(product);
   };
-  
 
   console.log("handle selected", selectedProducts);
 
- 
   const handleSelectAllChange = () => {
     const allProductsSelected = selectedProducts.length === product.length;
     if (allProductsSelected) {
@@ -73,7 +63,6 @@ const index = ({ product }) => {
       });
     }
   };
-
 
   return (
     <>
@@ -107,12 +96,20 @@ const index = ({ product }) => {
                       +
                     </button>
                     <PButtonProduct>{product.quantity}</PButtonProduct>
-                    <button
-                      onClick={() => onDecreaseQuantity(product.id)}
-                      title="Decrease Quantity"
-                    >
-                      -
-                    </button>
+                    {product.quantity == 1 ? (
+                      <button
+                        disabled
+                      >
+                        -
+                      </button>
+                    ) : (
+                      <button
+                        onClick={() => onDecreaseQuantity(product.id)}
+                        title="Decrease Quantity"
+                      >
+                        -
+                      </button>
+                    )}
                   </Quantity>
                   <button
                     onClick={() => onRemoveItem(product.id)}

@@ -14,7 +14,7 @@ export const Container = styled.div `
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 10px;
+  margin-bottom: 1px;
   // border: 1px solid blue;
 `;
 export const Content = styled.div `
@@ -58,11 +58,14 @@ export const ButtonProduct = styled.div `
 `;
 export const Buttonpay = styled.div `
   display: flex;
+  align-items: center;
   height: 30px;
-  background-color: rgb(201, 153, 31);
+  background-color: rgb(46, 124, 46);;
   justify-content: center;
-  width: 60%;
+  width: 80%;
   border-radius: 10px; 
+  color: white;
+  padding: 5px;
 `;
 
 export const PButtonProduct = styled.div `
@@ -79,7 +82,8 @@ export const Price = styled.div `
 export const PPrice = styled.div `
   font-size: 15px;
   text-align: start;
-  color: red;
+  font-weight: bold;
+  color:rgb(46, 124, 46);
 `;
 
 export const Component = styled.div `
@@ -107,6 +111,15 @@ export const ContainerButton = styled.div `
  display: flex;
  justify-content: center;
   align-items: center;
-  background-color: blue;
+  background:rgb(46, 124, 46);
   width: 450px
+`;
+
+export const ContainerUp = styled.div `
+ display: flex;
+ justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  // margin-top: -100px;
+  background-color: white;
 `;

@@ -75,6 +75,7 @@ export const Component = styled.div `
     font-size: 10px;
     margin-left: 10px;
     font-weight: bold;
+    color: white;
   }
 `;
 
@@ -96,5 +97,6 @@ export const Quantity = styled.div `
     font-weight: bold;
     font-size: 15px;
     margin: 3px;
+    color: white;
   }
 `;

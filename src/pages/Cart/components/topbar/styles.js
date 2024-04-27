@@ -13,7 +13,7 @@ export const Container = styled.div `
 export const Title = styled.h1 `
   font-size: 17px;
   color: #000000;
-  margin-left: 10px;
+  margin-left: 10px
 `;
 
 export const ButtonCart = styled.div `
@@ -34,7 +34,7 @@ export const ButtonCart = styled.div `
 export const Content = styled.div `
   display: flex;
   align-items: center;
-  width: 170px;
+  width: 195px;
   height: 32 px;
 `;
 export const ButtonDel = styled.div `

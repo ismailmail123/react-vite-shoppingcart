@@ -1,65 +1,108 @@
 // import "./style.css";
 
+import { useState } from "react";
 import Image from "../../../../assets/react.svg";
 import useCartStore from "../../../../store/useCartStore";
-import { Container, ButtonProduct, ButtonHide, Date, Buttonpay, Component, ContainerList, Content, PPrice, Price, ProductContent, ProductText, ContainerButton} from "./styles";
+import {
+  Container,
+  ButtonProduct,
+  ButtonHide,
+  Date,
+  Buttonpay,
+  Component,
+  ContainerList,
+  Content,
+  PPrice,
+  Price,
+  ProductContent,
+  ProductText,
+  ContainerButton,
+  ContainerUp,
+} from "./styles";
+
+const index = ({ history }) => {
+  const [showContainerUp, setShowContainerUp] = useState(false);
 
 
-
-
-
-const index = ({history}) => {
-
-  // const {orderHistory} = useCartStore()
-  console.log("ini product", history)
-  // const titles = history.order.map(item => item.title);
-
-  // console.log("ini title", titles);
+  const handleOpen = () => setShowContainerUp(!showContainerUp);
 
   return (
     <>
-    {
-    history.order.map((item,index) => (
+      {/* {
+    history.order.map((item,index) => ( */}
       <>
-      <Container>
-      <ContainerList >
-      <Content key={index}>
-        <ProductContent>
-          <img src={item.image} />
-          <ProductText>
-            <p>{item.title}</p>
-            <ButtonProduct>
-              <Price>
-                <PPrice>{new Intl.NumberFormat("id-ID",
-                {style : "currency",
-                currency: "IDR",})
-                .format(item.price)
-                }</PPrice>
-              </Price>
-              <Component>
-                <Buttonpay>Beli Lagi</Buttonpay>
-                <Date>{history.timestamp}</Date>
-              </Component>
-            </ButtonProduct>
-          </ProductText>
-        </ProductContent>
-      </Content>
-    </ContainerList>
-    {/* <ContainerButton>
-    <ButtonHide>Lihat detail</ButtonHide>
-    </ContainerButton> */}
-    </Container>
+        <Container style={{borderTop: "1px solid black"}}>
+          <ContainerList>
+            <Content key={index}>
+              <ProductContent>
+                <img src={history.order[0].image} />
+                <ProductText>
+                  <p>{history.order[0].title}</p>
+                  <ButtonProduct>
+                    <Price>
+                      <PPrice>
+                        {new Intl.NumberFormat("id-ID", {
+                          style: "currency",
+                          currency: "IDR",
+                        }).format(history.totalPrice)}
+                      </PPrice>
+                    </Price>
+                    <Component>
+                      <Buttonpay>Beli Lagi</Buttonpay>
+                      <Date>{history.timestamp}</Date>
+                    </Component>
+                  </ButtonProduct>
+                </ProductText>
+              </ProductContent>
+            </Content>
+          </ContainerList>
+          
+            <ContainerButton>
+              <ButtonHide onClick={handleOpen}>
+                {showContainerUp ? "sembunyikan" : "Lihat Detail"}
+              </ButtonHide>
+            </ContainerButton>
+            {showContainerUp && (
+  <ContainerUp>
+    {history.order.map((item, index) => (
+      <>
+        <ContainerList open key={index}>
+          <Content>
+            <ProductContent>
+              <img src={item.image} alt={item.title} />
+              <ProductText>
+                <p>{item.title}</p>
+                <ButtonProduct>
+                  <Price>
+                    <PPrice>
+                      {new Intl.NumberFormat("id-ID", {
+                        style: "currency",
+                        currency: "IDR",
+                      }).format(item.price)}
+                    </PPrice>
+                  </Price>
+                  <Component>
+                    <Date>x {item.quantity}</Date>
+                  </Component>
+                </ButtonProduct>
+              </ProductText>
+            </ProductContent>
+          </Content>
+        </ContainerList>
       </>
-    ))
-    }
-    
-    
+    ))}
+  </ContainerUp>
+)}
+
+        </Container>
+      </>
+      {/* ))
+    } */}
     </>
   );
 };
 
 export default index;
-
 
 // import React from 'react';
 
@@ -101,4 +144,3 @@ export default index;
 // };
 
 // export default Index;
-
