@@ -19,12 +19,21 @@ import {
   ContainerButton,
   ContainerUp,
 } from "./styles";
+import { useNavigate } from "react-router-dom";
 
 const index = ({ history }) => {
   const [showContainerUp, setShowContainerUp] = useState(false);
-
-
   const handleOpen = () => setShowContainerUp(!showContainerUp);
+  // const {addCartItems} = useCartStore();
+
+  // const navigate = useNavigate()
+  // const onAddToOrder = () => {
+  //     addCartItems(history.order);
+  //     // console.log("data history", history.order)
+  //     // alert("silahkan cek dikernjang belanja");
+  //     navigate("/cart");
+  // };
+  // console.log("ini history", history.order[1])
 
   return (
     <>
@@ -48,7 +57,7 @@ const index = ({ history }) => {
                       </PPrice>
                     </Price>
                     <Component>
-                      <Buttonpay>Beli Lagi</Buttonpay>
+                      {/* <Buttonpay onClick={onAddToOrder}>Beli Lagi</Buttonpay> */}
                       <Date>{history.timestamp}</Date>
                     </Component>
                   </ButtonProduct>

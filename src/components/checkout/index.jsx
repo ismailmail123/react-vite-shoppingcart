@@ -1,5 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
-// import "./style.css";
 import { useNavigate } from "react-router-dom";
 import Modal from '../modal'
 import {
@@ -26,17 +24,14 @@ const getTotal = (cartItem) => {
 
 console.log("ini car Item");
 
-const index = ({ selectall, order, handleSelectAllChange, product }) => {
+const index = ({ selectall, order }) => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleModal = () => setIsOpen(!isOpen);
-  
-  
   const selectedProducts = useCartStore((state) => state.selectedProducts);
-
   const { totalQuantity, totalPrice } = getTotal(selectedProducts);
+  const { cartItems, selectAllProducts} = useCartStore();
+  const navigate = useNavigate();
 
-  
   // const { addOrder } = useCartStore();
   const onAddToOrder = () => {
     if (selectedProducts.length == 0) {
@@ -47,20 +42,35 @@ const index = ({ selectall, order, handleSelectAllChange, product }) => {
       // alert("data berhasil ditambahkan");
       // navigate("/riwayat");
     }
-
     //  console.log(listProduct)
-  };
-  const navigate = useNavigate();
+  }; 
 
+  
   const handleNavigate = () => {
-    if(selectedProducts.length === 0){
+    if (selectedProducts.length === 0) {
       alert("Silahkan pilih beberapa produk")
-    }else{
+    } else {
       navigate("/order")
     }
   }
 
-  
+  const removeSelectedProduct = (productId) => {
+    useCartStore.setState((state) => ({
+      selectedProducts: state.selectedProducts.filter(
+        (product) => product.id !== productId
+      ),
+    }));
+  };
+  const handleSelectAllChange = (event) => {
+    if (event.target.checked) {
+      selectAllProducts(selectedProducts);
+    } else {
+      selectedProducts.forEach((product) => {
+        removeSelectedProduct(product.id);
+      });
+    }
+  }
+  console.log("ini handel select all", selectedProducts)
 
   return (
     <Container selectall={selectall} order={order}>
@@ -69,7 +79,7 @@ const index = ({ selectall, order, handleSelectAllChange, product }) => {
           <Checkbox>
             <input
               type="checkbox"
-              checked={selectedProducts.length === product.length}
+              checked={selectedProducts.length === cartItems.length}
               onChange={handleSelectAllChange}
             ></input>
             <p>semua</p>

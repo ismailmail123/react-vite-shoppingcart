@@ -7,8 +7,6 @@ import useCartStore from '../../../../store/useCartStore';
 
 const index = () => {
 
-  // const {selectedProducts} = useCartStore();
-
   const selectedProducts = useCartStore((state) => state.selectedProducts)
   const removeSelectedProduct = (productId) => {
     useCartStore.setState((state) => ({
@@ -25,17 +23,17 @@ const index = () => {
   }
   const navigate = useNavigate();
   return (
-  <Container>
-    <Content>
-    <ButtonCart onClick={() => navigate(-1)}>
-      <img src={backIcon} />
-      
-    </ButtonCart>
-    <Title> Keranjang Saya</Title>
-    </Content>
-    <ButtonDel onClick={handleRemove}>Ubah</ButtonDel>
-    
-  </Container>
+    <Container>
+      <Content>
+        <ButtonCart onClick={() => navigate(-1)}>
+          <img src={backIcon} />
+
+        </ButtonCart>
+        <Title> Keranjang Saya</Title>
+      </Content>
+      <ButtonDel onClick={handleRemove}>Ubah</ButtonDel>
+
+    </Container>
   )
 };
 

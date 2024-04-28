@@ -24,7 +24,6 @@ const index = ({ product }) => {
     toggleSelectedProduct,
     selectAllProducts,
   } = useCartStore();
-
   const [isChecked, setIsChecked] = useState(true);
 
   const onIncreaseQuantity = (productId) => {
@@ -32,7 +31,7 @@ const index = ({ product }) => {
   };
 
   const onDecreaseQuantity = (productId) => {
-      decreaseQuantity(productId);
+    decreaseQuantity(productId);
   };
 
   const onRemoveItem = (productId) => {

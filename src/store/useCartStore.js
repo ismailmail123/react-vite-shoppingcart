@@ -40,7 +40,7 @@ const useCartStore = create(
 
             selectAllProducts: () => {
                 const allProducts = get().cartItems; // Ambil seluruh produk
-                const allProductIds = allProducts.map((item) => item.id); // Ambil hanya ID produk
+                const allProductIds = allProducts.map((item) => item); // Ambil hanya ID produk
                 set({ selectedProducts: allProductIds }); // Set seluruh produk sebagai yang dipilih
             },
 

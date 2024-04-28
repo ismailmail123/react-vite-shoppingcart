@@ -18,7 +18,6 @@ const Modal1 = ({ isOpen, toggleModal }) => {
   const navigate = useNavigate();
   const selectedProducts = useCartStore((state) => state.selectedProducts);
   const [paymentAmount, setPaymentAmount] = useState(0);
-
   const { totalQuantity, totalPrice } = getTotal(selectedProducts);
   const { addOrder } = useCartStore();
 
