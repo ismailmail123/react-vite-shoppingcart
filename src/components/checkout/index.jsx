@@ -28,7 +28,7 @@ const index = ({ selectall, order }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleModal = () => setIsOpen(!isOpen);
   const selectedProducts = useCartStore((state) => state.selectedProducts);
-  const { totalQuantity, totalPrice } = getTotal(selectedProducts);
+  const { totalQuantity, totalPrice } = getTotal(selectedProducts); //jika data di centang maka akan memunculkan total
   const { cartItems, selectAllProducts} = useCartStore();
   const navigate = useNavigate();
 

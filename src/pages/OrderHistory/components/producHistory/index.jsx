@@ -35,6 +35,7 @@ const index = ({ history }) => {
   // };
   // console.log("ini history", history.order[1])
 
+ 
   return (
     <>
       {/* {
@@ -57,7 +58,7 @@ const index = ({ history }) => {
                       </PPrice>
                     </Price>
                     <Component>
-                      {/* <Buttonpay onClick={onAddToOrder}>Beli Lagi</Buttonpay> */}
+                      {/* <Buttonpay onClick={handleProductClick(index)}>Beli Lagi</Buttonpay> */}
                       <Date>{history.timestamp}</Date>
                     </Component>
                   </ButtonProduct>

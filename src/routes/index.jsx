@@ -7,6 +7,7 @@ import PageDetail from '../pages/Detail'
 import OrderPage from '../pages/Order'
 import Modal from '../components/modal'
 
+
 const index = () => {
   const router = createBrowserRouter([
     {
@@ -22,7 +23,7 @@ const index = () => {
       element: <PageHistory />,
     },
     {
-      path: "/detail",
+      path: "/detail/:id",
       element: <PageDetail />,
     },
     {

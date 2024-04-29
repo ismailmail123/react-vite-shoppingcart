@@ -5,6 +5,7 @@ import useSWR from "swr";
 import Loading from '../../components/loading'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import useCartStore from '../../store/useCartStore';
 
 const index = () => {
   const [products, setProducts] = useState();
@@ -27,6 +28,7 @@ const fetch = async () =>{
 useEffect(() => {
   fetch(products)
 }, [])
+// const {products} = useCartStore();
 
 console.log("ini adalah hasil data fetch", products)
   return (

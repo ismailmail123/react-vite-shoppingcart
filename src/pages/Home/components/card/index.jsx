@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import {
   Container,
   Image,
@@ -15,7 +15,7 @@ import useCartStore from "../../../../store/useCartStore";
 import cartIcon from "../../../../assets/icons/cart.svg";
 
 const index = ({ product }) => {
-  const navigate = useNavigate();
+
   const { addCartItems } = useCartStore();
   const onAddToCart = () => {
     addCartItems(product);
@@ -26,7 +26,7 @@ const index = ({ product }) => {
   return (
     <>
       <Container>
-        <Link to={`/detail`}>
+        <Link to={`/detail/${product.id}`}>
           <Image src={product.image} />
         </Link>
         <WrapDesc>

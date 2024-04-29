@@ -7,11 +7,9 @@ import {
   WrapDesc,
   Rating,
 } from "./styles";
-// import React from "../../../../assets/react.svg";
-import { useEffect, useState } from "react";
-import axios from "axios";
 
-const index = () => {
+
+const index = ({data}) => {
   // const [data, setData] = useState();
 
   const locale = "id-ID";
@@ -19,54 +17,34 @@ const index = () => {
     style: "currency",
     currency: "IDR",
   };
-  const [data, setData] = useState({});
-  
-  // useEffect(() => {
-  // fetchData(data)
-  // },[])
-  
-    // const fetcher = async () =>
-    //   fetch("https://fakestoreapi.com/products").then((res) => res.json());
-    // const { data: products } = useSWR("/products", fetcher);
-  
-    async function fetchData () {
 
-      try{
-        const response = await axios.get("https://fakestoreapi.com/products")
-       
-        console.log(response.data)
-        setData(response.data)
-      }catch (err) {
-        console.log("data error", err)
-      }
-    }
-
-    useEffect(() => {
-      fetchData();
-      
-    },[])
+  
   return (
     <>
       
-        {data && data.length >0 && data.slice(0, 1).map((item, index) => (
+        
            
           <>
-            <Container> 
-              <Image key={index} src={item.image} />
+           
+                <>
+                  <Container > 
+              <Image  src={data.image} />
               <WrapDesc>
                 <Label>
-                  {item.title}
+                  {data.title}
                 </Label>
                 <Desc>
-                  {item.description}
+                  {data.description}
                 </Desc>
                 <Price>{new Intl.NumberFormat(locale, option).format(
-                      item.price)}</Price>
-                <Rating>⭐ {item.rating.rate} / 5</Rating>
+                      data.price)}</Price>
+                <Rating>⭐ {data.rating?.rate} / 5</Rating>
               </WrapDesc>
                </Container>
+                </>
+              
             </>
-        ))} 
+         
           
       
     </>
@@ -74,3 +52,5 @@ const index = () => {
 };
 
 export default index;
+
+
