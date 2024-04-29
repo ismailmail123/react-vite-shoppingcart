@@ -1,22 +1,25 @@
 import styled from "styled-components";
 
+
 export const ContainerList = styled.div `
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 15px;
   box-sizing: border-box;
-  /* background-color: aqua; */
+  
   width: 100%;
 `;
-export const Container = styled.div `
+export const Title = styled.div `
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  margin-bottom: 1px;
-  // border: 1px solid blue;
+  font-weight: bold;
+  font-size: 20px;
+  border-bottom: 1px solid black;
+  width: 100%;
 `;
+
 export const Content = styled.div `
   display: flex;
   width: 100%;
@@ -63,11 +66,11 @@ export const Buttonpay = styled.div `
   background-color: rgb(46, 124, 46);;
   justify-content: center;
   width: 100%;
-  font-size: 12px;
   border-radius: 10px; 
   color: white;
-  padding: 2px;
+  padding: 5px;
   cursor: pointer;
+  font-size: 10px;
 `;
 
 export const PButtonProduct = styled.div `

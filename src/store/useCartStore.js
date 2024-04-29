@@ -71,7 +71,7 @@ const useCartStore = create(
                 }
             },
 
-            addOrder: (order, totalPrice, reminder, paymentAmount) =>
+            addOrder: (order, totalPrice, reminder, paymentAmount, totalQuantity) =>
                 set((state) => ({
                     orderHistory: [
                         ...state.orderHistory,
@@ -80,6 +80,7 @@ const useCartStore = create(
                             totalPrice,
                             reminder,
                             paymentAmount,
+                            totalQuantity,
                             timestamp: new Date().toLocaleString(), // Waktu pemesanan
                         },
                     ],

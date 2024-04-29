@@ -6,6 +6,7 @@ import PageHistory from '../pages/OrderHistory'
 import PageDetail from '../pages/Detail'
 import OrderPage from '../pages/Order'
 import Modal from '../components/modal'
+import DetailHistory from '../pages/DetailHistory'
 
 
 const index = () => {
@@ -33,6 +34,10 @@ const index = () => {
     {
       path: "/modal",
       element: <Modal />,
+    },
+    {
+      path: "/detailhistory/:index",
+      element: <DetailHistory />,
     },
   ]);
 

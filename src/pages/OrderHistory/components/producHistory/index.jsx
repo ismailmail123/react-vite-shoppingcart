@@ -6,7 +6,7 @@ import useCartStore from "../../../../store/useCartStore";
 import {
   Container,
   ButtonProduct,
-  ButtonHide,
+  // ButtonHide,
   Date,
   Buttonpay,
   Component,
@@ -16,17 +16,18 @@ import {
   Price,
   ProductContent,
   ProductText,
-  ContainerButton,
-  ContainerUp,
+  // ContainerButton,
+  // ContainerUp,
 } from "./styles";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
-const index = ({ history }) => {
+const index = ({ history, index}) => {
   const [showContainerUp, setShowContainerUp] = useState(false);
   const handleOpen = () => setShowContainerUp(!showContainerUp);
   // const {addCartItems} = useCartStore();
 
-  // const navigate = useNavigate()
+  const navigate = useNavigate();
+  // const index = useParams();
   // const onAddToOrder = () => {
   //     addCartItems(history.order);
   //     // console.log("data history", history.order)
@@ -34,8 +35,7 @@ const index = ({ history }) => {
   //     navigate("/cart");
   // };
   // console.log("ini history", history.order[1])
-
- 
+console.log("ini index", index)
   return (
     <>
       {/* {
@@ -58,7 +58,7 @@ const index = ({ history }) => {
                       </PPrice>
                     </Price>
                     <Component>
-                      {/* <Buttonpay onClick={handleProductClick(index)}>Beli Lagi</Buttonpay> */}
+                      <Buttonpay onClick={() => navigate(`/detailhistory/${index}`)}>Lihat Detail</Buttonpay>
                       <Date>{history.timestamp}</Date>
                     </Component>
                   </ButtonProduct>
@@ -67,7 +67,7 @@ const index = ({ history }) => {
             </Content>
           </ContainerList>
           
-            <ContainerButton>
+            {/* <ContainerButton>
               <ButtonHide onClick={handleOpen}>
                 {showContainerUp ? "sembunyikan" : "Lihat Detail"}
               </ButtonHide>
@@ -102,7 +102,7 @@ const index = ({ history }) => {
       </>
     ))}
   </ContainerUp>
-)}
+)} */}
 
         </Container>
       </>
