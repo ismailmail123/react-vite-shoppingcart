@@ -96,11 +96,7 @@ const index = ({ product }) => {
                     </button>
                     <PButtonProduct>{product.quantity}</PButtonProduct>
                     {product.quantity == 1 ? (
-                      <button
-                        disabled
-                      >
-                        -
-                      </button>
+                      <button disabled>-</button>
                     ) : (
                       <button
                         onClick={() => onDecreaseQuantity(product.id)}

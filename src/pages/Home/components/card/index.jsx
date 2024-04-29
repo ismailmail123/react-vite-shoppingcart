@@ -7,19 +7,18 @@ import {
   Price,
   WrapDesc,
   ButtonAdd,
-  Containerbtn
+  Containerbtn,
 } from "./styles";
 // import { useEffect, useState } from "react";
 // import axios from "axios";
 import useCartStore from "../../../../store/useCartStore";
 import cartIcon from "../../../../assets/icons/cart.svg";
 
-const index = ({ product }) => {
-
+const index = ({ product}) => {
   const { addCartItems } = useCartStore();
   const onAddToCart = () => {
     addCartItems(product);
-    // alert("data berhasil ditambahkan")
+    alert("data berhasil ditambahkan")
     // navigate("/cart")
     //  console.log(listProduct)
   };

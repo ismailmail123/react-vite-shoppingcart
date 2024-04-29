@@ -20,12 +20,11 @@ export const Container = styled.div `
 export const Content = styled.div `
   display: flex;
   width: 100%;
-  
 `;
 export const ProductContent = styled.div `
   display: flex;
   width: 100%;
-  img{
+  img {
     width: 50px;
   }
 `;
@@ -60,11 +59,11 @@ export const Buttonpay = styled.div `
   display: flex;
   align-items: center;
   height: 30px;
-  background-color: rgb(46, 124, 46);;
+  background-color: rgb(46, 124, 46);
   justify-content: center;
   width: 100%;
   font-size: 12px;
-  border-radius: 10px; 
+  border-radius: 10px;
   color: white;
   padding: 2px;
   cursor: pointer;
@@ -85,41 +84,41 @@ export const PPrice = styled.div `
   font-size: 15px;
   text-align: start;
   font-weight: bold;
-  color:rgb(46, 124, 46);
+  color: rgb(46, 124, 46);
 `;
 
 export const Component = styled.div `
   display: flex;
   justify-content: end;
   align-items: end;
-  flex-direction: column;gap: 10px;
-  
+  flex-direction: column;
+  gap: 10px;
 `;
 export const Date = styled.div `
   display: flex;
   justify-content: end;
   align-items: center;
   flex-direction: column;
-  font-size: 12px
+  font-size: 12px;
 `;
 
 export const ButtonHide = styled.button `
- background-color: whiteSmoke;
- background-color: #e8eaec;
- border: 1px solid blue;
+  background-color: whiteSmoke;
+  background-color: #e8eaec;
+  border: 1px solid blue;
 `;
 
 export const ContainerButton = styled.div `
- display: flex;
- justify-content: center;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  background:rgb(46, 124, 46);
-  width: 450px
+  background: rgb(46, 124, 46);
+  width: 450px;
 `;
 
 export const ContainerUp = styled.div `
- display: flex;
- justify-content: center;
+  display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   // margin-top: -100px;

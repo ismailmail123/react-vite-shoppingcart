@@ -39,7 +39,6 @@ export const Buttonhome = styled.div `
   display: flex;
   justify-content: center;
   align-items: center;
-
 `;
 
 export const Content = styled.div `

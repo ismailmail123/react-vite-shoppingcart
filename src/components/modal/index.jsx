@@ -38,7 +38,13 @@ const Modal1 = ({ isOpen, toggleModal }) => {
     if (selectedProducts.length === 0) {
       alert("belum ada data yang ditambahkan");
     } else {
-      addOrder(selectedProducts, totalPrice, reminder, paymentAmount, totalQuantity);
+      addOrder(
+        selectedProducts,
+        totalPrice,
+        reminder,
+        paymentAmount,
+        totalQuantity
+      );
       alert("Anda berhasil melakukan pembayaran");
       navigate("/riwayat");
       // Hapus produk yang dipilih dari keranjang setelah menambahkan pesanan

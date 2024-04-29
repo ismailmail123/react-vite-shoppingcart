@@ -21,7 +21,7 @@ import {
 } from "./styles";
 import { useNavigate, useParams } from "react-router-dom";
 
-const index = ({ history, index}) => {
+const index = ({ history, index }) => {
   const [showContainerUp, setShowContainerUp] = useState(false);
   const handleOpen = () => setShowContainerUp(!showContainerUp);
   // const {addCartItems} = useCartStore();
@@ -35,13 +35,13 @@ const index = ({ history, index}) => {
   //     navigate("/cart");
   // };
   // console.log("ini history", history.order[1])
-console.log("ini index", index)
+  console.log("ini index", index);
   return (
     <>
       {/* {
     history.order.map((item,index) => ( */}
       <>
-        <Container style={{borderTop: "1px solid black"}}>
+        <Container style={{ borderTop: "1px solid black" }}>
           <ContainerList>
             <Content key={index}>
               <ProductContent>
@@ -58,7 +58,11 @@ console.log("ini index", index)
                       </PPrice>
                     </Price>
                     <Component>
-                      <Buttonpay onClick={() => navigate(`/detailhistory/${index}`)}>Lihat Detail</Buttonpay>
+                      <Buttonpay
+                        onClick={() => navigate(`/detailhistory/${index}`)}
+                      >
+                        Lihat Detail
+                      </Buttonpay>
                       <Date>{history.timestamp}</Date>
                     </Component>
                   </ButtonProduct>
@@ -66,8 +70,8 @@ console.log("ini index", index)
               </ProductContent>
             </Content>
           </ContainerList>
-          
-            {/* <ContainerButton>
+
+          {/* <ContainerButton>
               <ButtonHide onClick={handleOpen}>
                 {showContainerUp ? "sembunyikan" : "Lihat Detail"}
               </ButtonHide>
@@ -103,7 +107,6 @@ console.log("ini index", index)
     ))}
   </ContainerUp>
 )} */}
-
         </Container>
       </>
       {/* ))

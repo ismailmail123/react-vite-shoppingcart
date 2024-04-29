@@ -12,12 +12,11 @@ export const ContainerList = styled.div `
 export const Content = styled.div `
   display: flex;
   width: 100%;
-  
 `;
 export const ProductContent = styled.div `
   display: flex;
   width: 100%;
-  img{
+  img {
     width: 50px;
   }
 `;
@@ -71,13 +70,13 @@ export const Component = styled.div `
   display: flex;
   justify-content: end;
   align-items: end;
-  flex-direction: column;gap: 10px;
-  
+  flex-direction: column;
+  gap: 10px;
 `;
 export const Quantity = styled.div `
   display: flex;
   justify-content: end;
   align-items: center;
   flex-direction: column;
-  font-size: 14px
+  font-size: 14px;
 `;

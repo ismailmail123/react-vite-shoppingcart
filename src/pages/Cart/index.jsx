@@ -8,7 +8,7 @@ import { Checkout } from "../../components/checkout/styles";
 const index = () => {
   const {
     cartItems,
-    //  selectedProducts, 
+    //  selectedProducts,
     //  toggleSelectedProduct
   } = useCartStore();
   // const [isChecked, setIsChecked] = useState(true);
@@ -16,7 +16,7 @@ const index = () => {
   // const handleCheckboxChange = () => {
   //   setIsChecked(!isChecked);
   //   toggleSelectedProduct(cartItems);
-  // };  
+  // };
   // console.log("handle sel", selectedProducts);
 
   // const handleSelectAllChange = () => {
@@ -29,7 +29,6 @@ const index = () => {
   //     });
   //   }
   // };
-
 
   // Membuat objek untuk menyimpan item-order berdasarkan kategori
   // const categories = {};
@@ -47,7 +46,7 @@ const index = () => {
   //   categories[category].push(item);
   // });
 
-  console.log("ini cart items", cartItems)
+  console.log("ini cart items", cartItems);
 
   return (
     <>
@@ -61,12 +60,13 @@ const index = () => {
           </>
         ) : (
           cartItems.map((item, index) => (
-            <ListProduct key={index} product={item}
-            // handleCheckboxChange={handleCheckboxChange}
+            <ListProduct
+              key={index}
+              product={item}
+              // handleCheckboxChange={handleCheckboxChange}
             />
           ))
         )}
-
       </Container>
     </>
   );

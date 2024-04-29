@@ -14,7 +14,7 @@ export const Detail = styled.div `
   flex-direction: column;
   align-items: star;
   line-height: 1.7;
-  margin-bottom:60px;
+  margin-bottom: 60px;
 `;
 export const DetailText = styled.div `
   display: flex;
@@ -28,12 +28,10 @@ export const Title = styled.div `
 `;
 export const Text = styled.div `
   font-size: 10px;
-
 `;
 export const Price = styled.div `
   font-size: 10px;
   font-height: 5px;
-
 `;
 export const TotalPrice = styled.div `
   font-size: 13px;

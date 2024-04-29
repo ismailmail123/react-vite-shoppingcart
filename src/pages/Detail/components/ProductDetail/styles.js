@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div `
   background-color: #fff;
@@ -42,6 +42,6 @@ export const Price = styled.p `
   font-weight: bold;
 `;
 export const Rating = styled.div `
-font-size: 17px;
+  font-size: 17px;
   margin: 5 0;
 `;

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div `
   display: flex;
@@ -9,9 +9,8 @@ export const Container = styled.div `
 `;
 
 export const Content = styled.div `
-  background-color: #FDFDFD;
+  background-color: #fdfdfd;
   width: 450px;
-
   @media screen and (max-width: 450px) {
     width: 100%;
   }

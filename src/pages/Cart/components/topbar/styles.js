@@ -13,7 +13,7 @@ export const Container = styled.div `
 export const Title = styled.h1 `
   font-size: 17px;
   color: #000000;
-  margin-left: 10px
+  margin-left: 10px;
 `;
 
 export const ButtonCart = styled.div `

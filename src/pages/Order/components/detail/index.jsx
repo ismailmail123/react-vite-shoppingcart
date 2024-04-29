@@ -1,4 +1,13 @@
-import { Container, Detail, DetailText, Price, Text, Title, Total, TotalPrice } from "./styles";
+import {
+  Container,
+  Detail,
+  DetailText,
+  Price,
+  Text,
+  Title,
+  Total,
+  TotalPrice,
+} from "./styles";
 
 const index = () => {
   return (

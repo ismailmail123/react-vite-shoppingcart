@@ -1,53 +1,18 @@
-// /* eslint-disable react-hooks/rules-of-hooks */
-// // import "./style.css";
-// import { useNavigate } from "react-router-dom";
-// import { BuyButton, CartButton, Checkout, Container, ContainerChackout } from "./styles";
-// import Icon from '../../../../assets/icons/cart.svg'
-// import useCartStore from "../../../../store/useCartStore";
-
-// const index = ({data}) => {
-  
-//   const {selectedProducts} = useCartStore();
-//   const { addCartItems } = useCartStore();
-//   const onAddToCart = () => {
-//     addCartItems(data);
-//     alert("data berhasil ditambahkan")
-//     navigate("/cart")
-//     //  console.log(listProduct)
-//   };
-
-//   const onToCart = () => {
-//     selectedProducts(data);
-//     // alert("data berhasil ditambahkan")
-//     navigate("/order")
-//     //  console.log(listProduct)
-//   };
-
-//   const navigate = useNavigate();
-//   return (
-//   <Container>
-//       <ContainerChackout>
-//         <Checkout>
-//             <CartButton onClick={onAddToCart}>
-//               <img src={Icon} alt="" />
-//             </CartButton>
-//           <BuyButton onClick={onToCart}>Beli Sekarang</BuyButton>
-//         </Checkout>
-//       </ContainerChackout>
-//     </Container>
-//   )
-// };
-
-// export default index;
-
 import { useNavigate } from "react-router-dom";
-import { BuyButton, CartButton, Checkout, Container, ContainerChackout } from "./styles";
-import Icon from '../../../../assets/icons/cart.svg'
+import {
+  BuyButton,
+  CartButton,
+  Checkout,
+  Container,
+  ContainerChackout,
+} from "./styles";
+import Icon from "../../../../assets/icons/cart.svg";
 import useCartStore from "../../../../store/useCartStore";
 
-const Index = ({data}) => { // Ubah dari index menjadi Index (penulisan yang benar untuk nama komponen)
+const Index = ({ data }) => {
+  // Ubah dari index menjadi Index (penulisan yang benar untuk nama komponen)
 
-  const { addCartItems, toggleSelectedProduct} = useCartStore(); // Mengambil fungsi addCartItems dan selectedProducts dari useCartStore
+  const { addCartItems, toggleSelectedProduct } = useCartStore(); // Mengambil fungsi addCartItems dan selectedProducts dari useCartStore
   // const selectedProducts = useCartStore((state) => state. selectedProducts);
   const navigate = useNavigate();
 

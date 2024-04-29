@@ -1,10 +1,8 @@
-import { Content, Container } from './styles'
+import { Content, Container } from "./styles";
 
 const index = ({ children }) => (
   <Container>
-    <Content>
-      {children}
-    </Content>
+    <Content>{children}</Content>
   </Container>
 );
 

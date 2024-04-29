@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div `
   background-color: #fff;
@@ -7,14 +7,14 @@ export const Container = styled.div `
   margin: 0 2%;
   margin-bottom: 12px;
   overflow: hidden;
-  box-shadow: 0px 3px 5px -2px rgba(0,0,0,0.1);
-  margin-top:auto;
+  box-shadow: 0px 3px 5px -2px rgba(0, 0, 0, 0.1);
+  margin-top: auto;
 `;
 
 export const Image = styled.img `
   width: 100%;
   height: 136px;
-  
+
   object-fit: contain;
 `;
 
