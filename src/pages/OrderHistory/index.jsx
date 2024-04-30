@@ -12,7 +12,7 @@ const index = () => {
       <Topbar />
       {
         orderHistory.map((item, index) => (
-          <ProductHistory key={index} history={item}/>
+          <ProductHistory key={index} index={index} history={item}/>
         ))
       }
       
