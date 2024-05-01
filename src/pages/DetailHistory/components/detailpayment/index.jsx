@@ -3,13 +3,13 @@ import { ContainerDetail, TextTittle, Detail, Text } from "./styles";
 const index = ({ orderHistoryItem }) => {
   return (
     <ContainerDetail>
-      <TextTittle>Detail of Payment</TextTittle>
+      <TextTittle>Detail Pembayaran</TextTittle>
       <Detail>
-        <Text>Total Quantity</Text>
+        <Text>Total Produk</Text>
         <Text>{orderHistoryItem.totalQuantity}</Text>
       </Detail>
       <Detail>
-        <Text>Total Price</Text>
+        <Text>Total Harga</Text>
         <Text>
           {new Intl.NumberFormat("id-ID", {
             style: "currency",
@@ -18,7 +18,7 @@ const index = ({ orderHistoryItem }) => {
         </Text>
       </Detail>
       <Detail>
-        <Text>Total Payment</Text>
+        <Text>Total Pembayaran</Text>
         <Text>
           {new Intl.NumberFormat("id-ID", {
             style: "currency",
@@ -27,7 +27,7 @@ const index = ({ orderHistoryItem }) => {
         </Text>
       </Detail>
       <Detail>
-        <Text>Total Reminder</Text>
+        <Text>Sisa pembayaran</Text>
         <Text>
           {new Intl.NumberFormat("id-ID", {
             style: "currency",

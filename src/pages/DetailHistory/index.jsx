@@ -37,7 +37,7 @@ const Index = () => {
     <>
       <Topbar />
       <Container>
-        <Title style={{ borderBottom: "0" }}>Detail Order History</Title>
+        <Title style={{ borderBottom: "0" }}>Detail Riwayat Order</Title>
         <Title>{orderHistoryItem.timestamp}</Title>
         {orderHistoryItem.order.map((item, index) => (
           <Details

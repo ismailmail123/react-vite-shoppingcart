@@ -41,10 +41,7 @@ const index = ({ product }) => {
       removeItemFromCart(productId);
     }
   };
-  // const { orderHistory } = useCartStore();
-  console.log("ini product", orderHistory);
 
-  // const selectedProducts = useCartStore((state) => state.selectedProducts);
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
     toggleSelectedProduct(product);
@@ -67,6 +64,9 @@ const index = ({ product }) => {
     <>
       {/* <Topbar /> */}
       <ContainerList>
+        {
+
+        }
         <input
           type="checkbox"
           checked={selectedProducts.includes(product)}

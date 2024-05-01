@@ -87,11 +87,11 @@ const Modal1 = ({ isOpen, toggleModal }) => {
           </form>
           <div className="wrapper">
             <div className="detail">
-              <p>Total Quantity </p>
+              <p>Total Produk </p>
               <p> {totalQuantity}</p>
             </div>
             <div className="detail">
-              <p>Total price </p>
+              <p>Total Harga </p>
               <p>
                 {" "}
                 {new Intl.NumberFormat("id-ID", {

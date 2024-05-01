@@ -22,6 +22,15 @@ export const WrapDesc = styled.div `
   padding: 8px;
 `;
 
+export const ImageLimited = styled.img `
+  width: 100%;
+  height: 136px;
+  position: relative;
+  object-fit: contain;
+  // z-index: -1;
+  opacity: 0.5;
+`;
+
 export const Label = styled.p `
   font-size: 16px;
   color: #000000;
@@ -65,4 +74,29 @@ export const Containerbtn = styled.div `
   justify-content: end;
   align-items: center;
   width: 100%;
+`;
+export const LabelStock = styled.div `
+  // display: flex;
+  // justify-content: end;
+  // align-items: center;
+  width: 100%;
+  height: 136px;
+  z-index: 1;
+  background-color: transparent;
+  opacity: 0.2;
+  // positon: absolute;
+  margin-bottom: -136px;
+`;
+export const Limited = styled.div `
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weignt: black;
+  z-index: 2;
+  color: blue;
+  height: 136px;
+  img{
+    width: 100%;
+  height: 136px;
+  }
 `;
