@@ -15,12 +15,8 @@ import {
 const index = ({ item }) => {
   const { addCartItems } = useCartStore();
   const onAddToCart = () => {
-    window.location.reload();
-    addCartItems(item);
     // window.location.reload();
-    alert("data berhasil ditambahkan");
-    // navigate("/cart")
-    console.log("ini order historyyyyyyyy", item);
+    addCartItems(item);
   };
   return (
     <>
